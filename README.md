@@ -26,7 +26,7 @@ Viewing your employees has never been easier! Take a look at your employee's inf
 No installation needed.
 
 ## Usage
-This application is used for viewing your employees. You can also access general information about each emplployee. Use the filter option to sort the employees in alphabetical order or filter them by the country they reside in.
+This application is used for viewing your employees. You can also access general information about each emplployee. Use the filter option to sort the employees by age or by the country they reside in.
 
 ## Technologies
 Technologies used: JavaScript, Express, Node.js, HTML, CSS, React
