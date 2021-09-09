@@ -4,7 +4,7 @@
 
 <!-- <img src="Assets/four.png"> -->
 
-[Deployed](https://burnsgirl.github.io/Employee-Directory/)   |    [Repo](https://github.com/burnsgirl)
+[Deployed]()   |    [Repo](https://github.com/burnsgirl/Employee-Directory-2)
 
 
 
