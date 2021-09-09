@@ -8,7 +8,6 @@ function App() {
     <body>
       <Title />
       <Employee />
-      <Employee />
 
     </body>
 

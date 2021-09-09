@@ -31,24 +31,34 @@ class Employee extends Component {
         } else {
 
         return (
-            <div className="container">
-                <div className="row">
-                {items.map(items => (
-                    <div className="card col-md-4">
-                        <div card-header>
-                            <h1>{items.name.first} {items.name.last}</h1>
-                        </div>
-                        <img src={items.picture.large} class="img-thumbnail" alt={items.name.first}/>
-                        <div class="card-body">
-                            <p>Email: {items.email}</p>
-                            <p>Cell Phone Number: {items.cell}</p>
-                            <p>Age: {items.dob.age}</p>
-                            <p>City, State: {items.location.city}, {items.location.state}</p>
-                         </div>
-                    </div>
-                ))}
-                </div>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope='col'>Employee</th>
+                        <th scope='col'>First</th>
+                        <th scope='col'>Last</th>
+                        <th scope='col'>Email</th>
+                        <th scope='col'>Age</th>
+                        <th scope='col'>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {items.map(items => (
+                        
+
+                                <tr>
+                                    <td scope='row' data-label='Employee'><img src={items.picture.large} class="img-thumbnail" alt={items.name.first}></img></td>
+                                    <td data-label='First'>{items.name.first}</td>
+                                    <td data-label='Last'>{items.name.last}</td>
+                                    <td data-label='Email'>{items.email}</td>
+                                    <td data-label='Age'>{items.dob.age}</td>
+                                    <td data-label='City'>{items.location.city}, {items.location.state}</td>
+
+                                </tr>
+
+                    ))}
+                </tbody>
+            </table>
             
         )
 
