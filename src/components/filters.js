@@ -61,36 +61,37 @@ class Filters extends React.Component {
         this.state.results.sort(function(a,b) {
             if(e==='last') {
                 if (a.name.last > b.name.last) {
-                    return 1
+                    return 1;
                 } else if (a.name.last < b.name.last) {
-                    return -1
+                    return -1;
                 } return 0;
             } else if (e==='country') {
                 if (a.location.state > b.location.state) {
                     return 1
                 } else if (a.location.state < b.location.state) {
-                    return -1
-                }  return 0
+                    return -1;
+                }  return 0;
             } else {
-                console.log('sort by email')
+                console.log('')
                 if (a[e] > b[e]) {
-                    return 1
+                    return 1;
                 } else if (a[e] < b[e]) {
                     return -1
-                }  return 0
+                }  return 0;
             }
         })
         console.log(this.state.results)
     }
 
     filterData(e, results) {
+        const num = results.dob;
         console.log('filterData function called')
         if (e === "yage") {
-            const filteredArray = results.filter(dob => dob.age < 41)
+            const filteredArray = num.filter(dob => dob.age < 41);
             this.setState({results: filteredArray})
-            console.log("hello")
+            console.log(filteredArray);
         } else if (e === "oage") {
-            const filteredArray = results.filter(dob => dob.age > 40)
+            const filteredArray = num.filter(dob => dob.age > 40);
             this.setState({results: filteredArray})
             (console.log("bye"))
         } else {
@@ -98,6 +99,8 @@ class Filters extends React.Component {
             this.setState({results: this.state.baseResults})
         }
     }
+
+   
 
     render() {
         console.log(this.state.results)
