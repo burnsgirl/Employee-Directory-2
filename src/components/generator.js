@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { useState } from 'react';
+
 
 class Employee extends Component {
 
@@ -20,6 +22,9 @@ class Employee extends Component {
             })
         })
     }
+
+    const [searchText, setSearchText] = useState('');
+    const [data, setData] = useState(items);
 
     render() {
         var {items, loading} = this.state
