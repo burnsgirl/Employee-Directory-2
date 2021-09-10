@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import React from "react";
 import Table from "./table.js";
 import Api from "./utils/api";
+import Input from "components/Input";
 
 class Filter extends Component {
 
@@ -32,7 +33,6 @@ class Filter extends Component {
         })
         this.sortData(e.target.value);
 
-        
         if (this.state.filterChoice===''){
             return;
         } else {
@@ -40,6 +40,20 @@ class Filter extends Component {
         }
     };
     
+    handleFilterChange = e => {
+        console.log('filter function');
+        const filterValue = e.target.value;
+        this.setState({
+            filterChoice: filterValue,
+        })
+        this.filterData(e.target.value, this.state.baseResults);
+
+        if (this.state.sortChoice==='') {
+            return;
+        } else {
+            this.sortData(this.state.sortChoice);
+        }
+    }
 }
 
 export default Filter;
