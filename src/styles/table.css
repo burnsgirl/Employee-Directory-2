@@ -1,0 +1,45 @@
+#header {
+    background: #bbddea;
+    background: -moz-linear-gradient(top,  #bbddea 0%, #ffffff 0%, #7db9e8 0%, #fffcfc 97%, #fffcfc 97%);
+    background: -webkit-linear-gradient(top,  #bbddea 0%,#ffffff 0%,#7db9e8 0%,#fffcfc 97%,#fffcfc 97%);
+    background: linear-gradient(to bottom,  #bbddea 0%,#ffffff 0%,#7db9e8 0%,#fffcfc 97%,#fffcfc 97%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbddea', endColorstr='#fffcfc',GradientType=0 );
+}
+
+#title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bolder;
+}
+
+.button {
+    width: 150px;
+    position: relative;
+    left:160px;
+}
+
+table {
+    width:100%;
+    background-color: #B5D3F0;
+}
+
+
+th {
+    height:50px;
+    text-align: center;
+}
+
+td {
+    width: 150px;
+    text-align: center; 
+}
+
+.one {
+    text-align: center;
+    border: 3px rgb(178, 178, 201) solid;
+}
+
+.two {
+    text-align: center;
+    border: 3px rgb(178, 178, 201) solid;
+}
+

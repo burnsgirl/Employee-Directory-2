@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/table.css';
 
 
 
@@ -8,12 +9,12 @@ import React from 'react';
             <table>
                 <thead>
                     <tr>
-                        <th scope='col'>Employee</th>
-                        <th scope='col'>First</th>
-                        <th scope='col'>Last</th>
-                        <th scope='col'>Email</th>
-                        <th scope='col'>Age</th>
-                        <th scope='col'>Location</th>
+                        <th scope='col' class="one">Employee</th>
+                        <th scope='col' class="two">First</th>
+                        <th scope='col'class="one">Last</th>
+                        <th scope='col'class="two">Email</th>
+                        <th scope='col'class="one">Age</th>
+                        <th scope='col'class="two">Location</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,12 +22,12 @@ import React from 'react';
                         
 
                                 <tr key = {index}>
-                                    <td scope='row' data-label='Employee'><img src={employee.picture.large} class="img-thumbnail" alt={employee.name.first}></img></td>
-                                    <td data-label='First'>{employee.name.first}</td>
-                                    <td data-label='Last'>{employee.name.last}</td>
-                                    <td data-label='Email'>{employee.email}</td>
-                                    <td data-label='Age'>{employee.dob.age}</td>
-                                    <td data-label='Country'>{employee.location.state}</td>
+                                    <td scope='row' data-label='Employee' class="one"><img src={employee.picture.large} class="img-thumbnail" alt={employee.name.first}></img></td>
+                                    <td data-label='First' class="two">{employee.name.first}</td>
+                                    <td data-label='Last' class="one">{employee.name.last}</td>
+                                    <td data-label='Email' class="two">{employee.email}</td>
+                                    <td data-label='Age' class="one">{employee.dob.age}</td>
+                                    <td data-label='Location' class="two">{employee.location.state}</td>
 
                                 </tr>
 
