@@ -1,9 +1,10 @@
+import React, { Component } from "react";
 import React from "react";
-import Employee from "./generator";
+import Table from "./table.js";
+import Api from "./utils/api";
 
-function AgeFilter() {
-    const items = [];
-    const result = items.filter(items => items.dob.age >= 20 && <= 30)
+class Filter extends Component {
+
 }
 
-export default AgeFilter;
+export default Filter;
