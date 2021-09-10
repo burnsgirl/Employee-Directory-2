@@ -2,7 +2,7 @@
 
 ![Github License](https://img.shields.io/badge/license-none-blue.svg)
 
-<!-- <img src="Assets/four.png"> -->
+<img src="./public/Assets/one.png">
 
 [Deployed]()   |    [Repo](https://github.com/burnsgirl/Employee-Directory-2)
 
