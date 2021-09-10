@@ -13,7 +13,7 @@ import React from 'react';
                         <th scope='col'>Last</th>
                         <th scope='col'>Email</th>
                         <th scope='col'>Age</th>
-                        <th scope='col'>City</th>
+                        <th scope='col'>Country</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +26,7 @@ import React from 'react';
                                     <td data-label='Last'>{employee.name.last}</td>
                                     <td data-label='Email'>{employee.email}</td>
                                     <td data-label='Age'>{employee.dob.age}</td>
-                                    <td data-label='City'>{employee.location.city}, {employee.location.state}</td>
+                                    <td data-label='Country'>{employee.location.state}</td>
 
                                 </tr>
 
