@@ -80,7 +80,21 @@ class Filter extends Component {
             }
         })
         console.log(this.state.results);
-    };
+    }
+
+    filterData(e, results) {
+        console.log('filterData function called');
+        if (e==='age 20-40') {
+            const filteredArray = results.filter(age => age.dob === (i < 41));
+            this.setState({results: filteredArray});
+        } else if (e==='age 41-60') {
+            const filteredArray = results.filter(age => age.dob === (i > 40));
+            this.setState({results: filteredArray})
+        } else {
+            console.log(results)
+            this.setState({results: this.state.baseResults});
+        }
+    }
 }
 
 export default Filter;

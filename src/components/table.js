@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
     function Table (props) {
 
         return (
@@ -16,10 +17,10 @@ import React from 'react';
                     </tr>
                 </thead>
                 <tbody>
-                    {props.res.map((employee, i) => 
+                    {props.results.map((employee, index) => 
                         
 
-                                <tr key = {i}>
+                                <tr key = {index}>
                                     <td scope='row' data-label='Employee'><img src={employee.picture.large} class="img-thumbnail" alt={employee.name.first}></img></td>
                                     <td data-label='First'>{employee.name.first}</td>
                                     <td data-label='Last'>{employee.name.last}</td>
