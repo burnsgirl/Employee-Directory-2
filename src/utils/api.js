@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const url = "https://randomuser.me/api/?results=20";
+const url = "https://randomuser.me/api/?seed=emp";
 
-const Api = {
+const API = {
     search: function(data) {
         return axios.get(url + data);
     }
 };
 
-export default Api;
+export default API;

@@ -1,14 +1,15 @@
 import './App.css';
-import Filters from './components/filters';
+import React from 'react';
+import Filters from './components/filters.js';
 
 
 function App() {
   return (
-    <body>
+    
 
       <Filters />
 
-    </body>
+    
 
   );
 }

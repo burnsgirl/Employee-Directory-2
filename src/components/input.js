@@ -5,7 +5,7 @@ import InputInfo from './inputinfo';
 
 function Input(props) {
     return (
-        <div class='py-3'>
+        <div>
             <InputInfo onChange={props.handleSortChange} 
             type='sort' 
             defaultVal='' defaultDesc='Select Sort Order' 
