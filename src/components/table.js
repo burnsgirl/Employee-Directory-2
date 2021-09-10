@@ -1,39 +1,7 @@
 import React, {Component} from 'react';
-import { useState } from 'react';
 
 
-class Employee extends Component {
-
-    constructor(props){
-        super(props)
-        this.state = {
-            items:[],
-            loading:false
-        }
-    }
-
-    componentDidMount() {
-        fetch("https://randomuser.me/api/?results=20")
-        .then((res) => res.json())
-        .then((res) => {
-            this.setState({
-                items:res.results,
-                loading:true
-            })
-        })
-    }
-
-    const [searchText, setSearchText] = useState('');
-    const [data, setData] = useState(items);
-
-    render() {
-        var {items, loading} = this.state
-
-        if(!loading) {
-            return (
-                <div>Loading...</div>
-            )
-        } else {
+    function Table (props) {
 
         return (
             <table>
@@ -48,27 +16,26 @@ class Employee extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {items.map(items => (
+                    {props.res.map((employee, i) => 
                         
 
-                                <tr>
-                                    <td scope='row' data-label='Employee'><img src={items.picture.large} class="img-thumbnail" alt={items.name.first}></img></td>
-                                    <td data-label='First'>{items.name.first}</td>
-                                    <td data-label='Last'>{items.name.last}</td>
-                                    <td data-label='Email'>{items.email}</td>
-                                    <td data-label='Age'>{items.dob.age}</td>
-                                    <td data-label='City'>{items.location.city}, {items.location.state}</td>
+                                <tr key = {i}>
+                                    <td scope='row' data-label='Employee'><img src={employee.picture.large} class="img-thumbnail" alt={employee.name.first}></img></td>
+                                    <td data-label='First'>{employee.name.first}</td>
+                                    <td data-label='Last'>{employee.name.last}</td>
+                                    <td data-label='Email'>{employee.email}</td>
+                                    <td data-label='Age'>{employee.dob.age}</td>
+                                    <td data-label='City'>{employee.location.city}, {employee.location.state}</td>
 
                                 </tr>
 
-                    ))}
+                    )}
                 </tbody>
             </table>
             
         )
 
-        }
     }
-}
+    
 
-export default Employee;
+export default Table;
