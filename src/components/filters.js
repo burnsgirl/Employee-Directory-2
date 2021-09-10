@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import React from "react";
 import Table from "./table.js";
-import Api from "./utils/api";
-import Input from "components/Input";
+import Api from '../utils/api.js';
+import Input from "./input.js";
 
-class Filter extends Component {
+class Filters extends Component {
 
     state = {
         sortChoice: '',
@@ -85,16 +84,17 @@ class Filter extends Component {
     filterData(e, results) {
         console.log('filterData function called');
         if (e==='age 20-40') {
-            const filteredArray = results.filter(age => age.dob === (i < 41));
+            const filteredArray = results.filter(age => age.dob === (age.dob < 41));
             this.setState({results: filteredArray});
         } else if (e==='age 41-60') {
-            const filteredArray = results.filter(age => age.dob === (i > 40));
+            const filteredArray = results.filter(age => age.dob === (age.dob > 40));
             this.setState({results: filteredArray})
         } else {
             console.log(results)
             this.setState({results: this.state.baseResults});
         }
     }
+
 }
 
-export default Filter;
+export default Filters;
