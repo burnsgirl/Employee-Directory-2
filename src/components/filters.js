@@ -1,9 +1,12 @@
-import React, { Component } from "react";
-import Table from "./table.js";
-import Api from '../utils/api.js';
-import Input from "./input.js";
+import React from 'react';
 
-class Filters extends Component {
+import Api from '../utils/api.js';
+import Table from './table.js';
+import Title from './title.js';
+import Input from './input.js';
+
+
+class Filters extends React.Component {
 
     state = {
         sortChoice: '',
@@ -95,6 +98,17 @@ class Filters extends Component {
         }
     }
 
+    render() {
+        console.log(this.state.results);
+        return (
+            <div className='w-100'>
+              <Title />
+              <Input handleSortChange={this.handleSortChange} handleFilterChange={this.handleFilterChange}/>
+              <Table results={this.state.results}/>
+            </div>
+        );
+
+    }
 }
 
 export default Filters;
