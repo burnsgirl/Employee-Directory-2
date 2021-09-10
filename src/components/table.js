@@ -13,7 +13,7 @@ import React from 'react';
                         <th scope='col'>Last</th>
                         <th scope='col'>Email</th>
                         <th scope='col'>Age</th>
-                        <th scope='col'>Country</th>
+                        <th scope='col'>Location</th>
                     </tr>
                 </thead>
                 <tbody>
