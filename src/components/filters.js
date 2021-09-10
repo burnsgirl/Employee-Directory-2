@@ -54,6 +54,33 @@ class Filter extends Component {
             this.sortData(this.state.sortChoice);
         }
     }
+
+    sortData(e) {
+        console.log('sortData fuction called')
+        this.state.results.sort(function(a,b) {
+            if(e==='last') {
+                if (a.name.last > b.name.last) {
+                    return 1;
+                } else if (a.name.last < b.name.last) {
+                    return -1;
+                } return 0;
+            } else if (e==='country') {
+                if (a.location.state > b.location.state) {
+                    return 1;
+                } else if (a.location.state < b.location.state) {
+                    return -1;
+                }  return 0;
+            } else {
+                console.log('sort by email')
+                if (a[e] > b[e]) {
+                    return 1;
+                } else if (a[e] < b[e]) {
+                    return -1;
+                }  return 0;
+            }
+        })
+        console.log(this.state.results);
+    };
 }
 
 export default Filter;
