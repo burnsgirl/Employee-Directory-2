@@ -8,7 +8,7 @@ function Input(props) {
         <div>
             <InputInfo onChange={props.handleSortChange} 
             type='sort' 
-            defaultVal='' defaultDesc='Select Sort Order' 
+            defaultVal='' defaultDesc='View By' 
             val1='last' val1Desc='Last Name' 
             val2='country' val2Desc='Country'/>
             <InputInfo onChange={props.handleFilterChange} 
