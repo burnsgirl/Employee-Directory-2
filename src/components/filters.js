@@ -84,19 +84,18 @@ class Filters extends React.Component {
     }
 
     filterData(e, results) {
-        const num = results.dob;
         console.log('filterData function called')
         if (e === "yage") {
-            const filteredArray = num.filter(dob => dob.age < 41);
-            this.setState({results: filteredArray})
-            console.log(filteredArray);
+            const filteredArray = results.filter(x => x.dob.age < 41);
+            this.setState({results: filteredArray});
+            console.log(results);
         } else if (e === "oage") {
-            const filteredArray = num.filter(dob => dob.age > 40);
-            this.setState({results: filteredArray})
-            (console.log("bye"))
+            const filteredArray = results.filter(x => x.dob.age > 40);
+            this.setState({results: filteredArray});
+            (console.log(results));
         } else {
-            console.log("working")
-            this.setState({results: this.state.baseResults})
+            console.log("working");
+            this.setState({results: this.state.baseResults});
         }
     }
 
