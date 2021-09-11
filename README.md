@@ -4,7 +4,7 @@
 
 <img src="./public/Assets/one.png">
 
-[Deployed]()   |    [Repo](https://github.com/burnsgirl/Employee-Directory-2)
+[Deployed](https://burnsgirl.github.io/Employee-Directory-2/)   |    [Repo](https://github.com/burnsgirl/Employee-Directory-2)
 
 
 
